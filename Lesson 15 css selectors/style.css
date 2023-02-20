@@ -1,0 +1,23 @@
+p.text--bold {
+    color: red;
+}
+
+
+.child {
+    color: aqua;
+}
+
+div {
+    color: chartreuse;
+}
+
+.parent1>.childs {
+    color: rgba(248, 224, 8, 0.866);
+}
+
+
+#blog {
+    color: darkmagenta;
+}
+
+
