@@ -1,0 +1,10 @@
+.text {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 1.7em;
+    padding: 25px 25px 0 25px;
+    max-width: 50vmax;
+    height: 100px;
+    overflow: scroll;
+}
+
