@@ -1,0 +1,15 @@
+.wrapper {
+    padding: 50px 100px 30vh;
+    height: 100vh;
+}
+
+.logo {
+    height: 100%;
+    box-shadow: 0 0 10px gray;
+    background: url(./img/580b57fcd9996e24bc43c4e7.png) center /contain no-repeat, linear-gradient(79deg, rgba(235, 247, 247, 1) 0%, rgba(253, 45, 67, 0.8778361686471463) 100%);
+}
+
+/* background-position: center;
+    background-size: contain ;
+    background-repeat: no-repeat;
+} */
