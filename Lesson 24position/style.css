@@ -1,0 +1,11 @@
+.block {
+    background-color:red;
+    width: 150px;
+    height: 350px;
+    border-radius: 5%;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    left: 50%;  
+
+}
