@@ -1,0 +1,16 @@
+.lorem{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.lorem{
+    animation-name: recolor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes recolor {
+    from {color: red;}
+    to {color: rgb(31, 163, 239);}
+}

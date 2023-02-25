@@ -1,0 +1,28 @@
+.block {
+    margin: 100px auto;
+    border: 25px solid black;
+}
+
+.block {
+    transition-delay: 2s;
+    transition-duration: 3s;
+}
+
+.block:hover {
+    border-color: aqua;
+}
+
+/* Универсальное свойство */
+
+.block1 {
+    margin: 0 auto;
+    border: 25px solid greenyellow;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 8s .8s, border-color 2.5s .6s;
+}
+
+.block1:hover {
+    border-color: fuchsia;
+    border-radius: 100%;
+}
