@@ -1,0 +1,39 @@
+.wrap{height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 5em;
+    text-shadow: 0px 32px 6px  rgba(0, 0, 0, 0.241), 5px 65px 10px rgba(241, 39, 153, 0.312);
+    position: relative;
+}
+
+
+
+
+
+.title::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+}
+
+.title::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: rgb(248, 10, 10);
+    position: absolute;
+    top: 50%;
+    right: -10px;
+
+}

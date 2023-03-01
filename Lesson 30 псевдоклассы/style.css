@@ -1,0 +1,17 @@
+.container {
+    padding: 100px 100px;
+}
+
+.menu__item {
+    font-size: 2em;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    
+    
+}
+
+.menu__item:hover:first-child {
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
