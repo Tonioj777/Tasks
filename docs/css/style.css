@@ -580,17 +580,22 @@ html, body {
 
 .brands__item:hover {
     fill: #FF6433;
-    transform: scale(1.7);
+    transform: scale(1.3);
+    transition: all .5s;
 }
 
 .brands__title h2 {
-    font-size: 34px;
     font-weight: 800;
     font-size: 58px;
     line-height: 76px;
     text-align: center;
     letter-spacing: -3%;
     margin-bottom: 31px;
+}
+
+.brands__item svg {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ------------------------BLOG--------------------------------------- */
@@ -1218,9 +1223,6 @@ input::placeholder {
         margin-bottom: 16px;
     }
 
-    .process__info {
-        /* margin-right: 50px; */
-    }
 
     /* =======================cta 1100========================= */
     .cta__info {
@@ -1231,6 +1233,16 @@ input::placeholder {
         font-size: 38px;
         letter-spacing: normal;
         line-height: 55px;
+    }
+
+    /* ==========================brands1100===================== */
+    .title h2 {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        letter-spacing: -3%;
+        margin-bottom: 31px;
     }
 }
 
@@ -1354,364 +1366,405 @@ input::placeholder {
         line-height: 24px;
     }
 
-}
-
-/* ---------------------------max-width:768----------------------------- */
-/* ==============================HEADER================================= */
-
-@media (max-width:768px) {
-    .header__buttons {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+    brands__title h2 {
+        font-weight: 800;
+        font-size: 48px;
     }
 
-    .header__top {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ffffff;
-        z-index: 99;
-        transform: translatex(0%);
-        transition: all .5s;
+    /* ===================================brands900====================== */
+    .brands {
+        padding: 50px 0px;
     }
 
-    .header__top-inner {
-        padding: 80px 50px;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        min-width: 330px;
+    /* ---------------------------max-width:768----------------------------- */
+    /* ==============================HEADER================================= */
 
-    }
+    @media (max-width:768px) {
+        .header__buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
 
-    .header__top-open {
-        transform: translate(100%);
-    }
+        .header__top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            z-index: 99;
+            transform: translatex(0%);
+            transition: all .5s;
+        }
 
-    /* .burger--follow {
+        .header__top-inner {
+            padding: 80px 50px;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            min-width: 330px;
+
+        }
+
+        .header__top-open {
+            transform: translate(100%);
+        }
+
+        /* .burger--follow {
         box-shadow: 0 4px 8px 0px #8281819e;
         background: #d71919;
     } */
 
-    .burger {
-        position: fixed;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 15px;
-        right: 25px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        z-index: 100;
-        box-shadow: 0px 0px 15px 1px #e0dddc;
-        background-color: #ffffff;
+        .burger {
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 15px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            z-index: 100;
+            box-shadow: 0px 0px 15px 1px #e0dddc;
+            background-color: #ffffff;
+        }
+
+        .burger span {
+            display: block;
+            margin: 4px 0px;
+            width: 30px;
+            height: 4px;
+            background: #1E1B1B;
+            border-radius: 5px;
+        }
+
+        .burger::before, .burger::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 4px;
+            background: #1E1B1B;
+            border-radius: 5px;
+            transition: all .5s;
+        }
+
+        .burger.open::before {
+            position: fixed;
+            transform: rotate(41deg);
+            top: 45px;
+        }
+
+        .burger.open::after {
+            top: 45px;
+            position: fixed;
+            transform: rotate(-41deg);
+        }
+
+        .burger.open span {
+            display: none;
+        }
+
+        .header__nav-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header__content {
+            margin: 0 auto;
+        }
+
+        .header__nav {
+            margin: 0 auto;
+        }
+
+        .header__title h1 {
+            padding-top: 80px;
+            font-size: 32px;
+            line-height: 40px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+
+        .header__buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header__phone span {
+            display: none;
+        }
+
+        .btn__holder {
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+        }
+
+        /* ===============================OFFER==768=============================== */
+        .main__offer {
+            padding: 65px 0;
+        }
+
+        .offer__service {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 5px
+        }
+
+        .offer__title h2 {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 42px;
+            text-align: center;
+            letter-spacing: -2px;
+            margin: 0 auto;
+            max-width: 858px;
+            margin-bottom: 64px;
+            letter-spacing: normal;
+            margin-bottom: 25px;
+        }
+
+        .offer__subtitle {
+            text-align: center;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+            margin-bottom: 5px;
+            margin-bottom: 25px;
+        }
+
+        .about__link:hover {
+            background: none;
+            color: #1E1B1B;
+            fill: #1E1B1B;
+            line-height: 5px;
+
+        }
+
+        /* ============================PROCESS768=============================== */
+        .process_body {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .process__info {
+            /* max-width:none; */
+        }
+
+        .process__title {
+            font-size: 36px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .process__paragraph {
+            text-align: center;
+        }
+
+        .process__btn {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        /* =======================cta768============================ */
+        .cta__info {
+            padding: 100px 30px;
+        }
+
+        .cta__title h3 {
+            font-size: 24px;
+            letter-spacing: normal;
+            line-height: 30px;
+        }
+
+        .item__count {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 45px;
+        }
+
+        .item__desc {
+            font-size: 16px;
+            line-height: 14px;
+        }
+
+        .cta__btn {
+            padding: 10px 10px;
+        }
+
+        .experience__item {
+            margin-right: 15px;
+        }
+
+        /* ===========================brands768========================== */
+        .brands__logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -15px;
+        }
+
+        .brands {
+            padding: 30px 0px;
+        }
+
+        .brands__item {
+            margin-bottom: -25px;
+        }
+
+        .brands__item svg {
+            max-width: 90%;
+        }
+
+        .title h2 {
+            font-size: 50px;
+        }
     }
 
-    .burger span {
-        display: block;
-        margin: 4px 0px;
-        width: 30px;
-        height: 4px;
-        background: #1E1B1B;
-        border-radius: 5px;
-    }
-
-    .burger::before, .burger::after {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 4px;
-        background: #1E1B1B;
-        border-radius: 5px;
-        transition: all .5s;
-    }
-
-    .burger.open::before {
-        position: fixed;
-        transform: rotate(41deg);
-        top: 45px;
-    }
-
-    .burger.open::after {
-        top: 45px;
-        position: fixed;
-        transform: rotate(-41deg);
-    }
-
-    .burger.open span {
-        display: none;
-    }
-
-    .header__nav-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header__content {
-        margin: 0 auto;
-    }
-
-    .header__nav {
-        margin: 0 auto;
-    }
-
-    .header__title h1 {
-        padding-top: 80px;
-        font-size: 32px;
-        line-height: 40px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-    }
 
 
-    .header__buttons {
-        display: flex;
-        justify-content: center;
+
+
+    /* --------------------------- 480--------------------- */
+    /* ==========================HEADER480========================== */
+
+    @media (max-width: 480px) {
+
+        .header__title h1 {
+            font-size: 22px;
+            line-height: 20px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        .header__buttons {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header__btn {
+            padding: 15px 20px;
+            margin-bottom: 15px;
+        }
+
+        .header__phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .header__icon {
+            margin-right: 0px;
+            margin-bottom: 15px;
+        }
+
+        .header__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ==========================OFFER480========================== */
+
+        .offer__title h2 {
+            font-size: 24px;
+        }
+
+        .offer__subtitle {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .offer__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .about__link:hover {
+            padding: 5px 5px;
+        }
+
+        .about__link {
+            margin-top: 30px;
+            float: none;
+        }
+
+        .button {
+            padding: 10px 25px;
+        }
+
+        /* ==================cta480================================== */
+        .cta__info {
+            padding: 125px 15px;
+        }
+
+        .cta__title h3 {
+            font-size: 20px;
+            letter-spacing: normal;
+            line-height: 25px;
+        }
+
+        .item__count {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 45px;
+        }
+
+        .item__desc {
+            font-size: 16px;
+            line-height: 14px;
+        }
+
+        .cta__btn {
+            padding: 10px 10px;
+        }
+
+        .expierence__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            text-align: center;
+            grid-gap: 5px;
+        }
+
+        .cta__btn {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        /* ==========================brands============================ */
+        .title h2 {
+            font-size: 32px;
+            letter-spacing: normal;
+            line-height: 56px;
+        }
     }
 
-    .header__phone span {
-        display: none;
+
+
+
+    /* -------------------400----------------------- */
+    @media (max-width: 400px) {
+        .header__top-inner {
+            min-width: none;
+        }
     }
 
-    .btn__holder {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    /* ===============================OFFER==768=============================== */
-    .main__offer {
-        padding: 65px 0 ;
-    }
-
-    .offer__service {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 5px
-    }
-
-    .offer__title h2 {
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 42px;
-        text-align: center;
-        letter-spacing: -2px;
-        margin: 0 auto;
-        max-width: 858px;
-        margin-bottom: 64px;
-        letter-spacing: normal;
-        margin-bottom: 25px;
-    }
-
-    .offer__subtitle {
-        text-align: center;
-        font-size: 20px;
-        line-height: 25px;
-        letter-spacing: -0.03em;
-        margin-bottom: 5px;
-        margin-bottom: 25px;
-    }
-
-    .about__link:hover{background: none;
-        color: #1E1B1B;
-        fill: #1E1B1B;
-        line-height: 5px;
-        
-    }
-
-    /* ============================PROCESS768=============================== */
-    .process_body {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .process__info {
-        /* max-width:none; */
-    }
-
-    .process__title {
-        font-size: 36px;
-        text-align: center;
-        font-weight: 800;
-    }
-
-    .process__paragraph {
-        text-align: center;
-    }
-
-    .process__btn {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-
-    /* =======================cta768============================ */
-    .cta__info {
-        padding: 100px 30px;
-    }
-
-    .cta__title h3 {
-        font-size: 24px;
-        letter-spacing: normal;
-        line-height: 30px;
-    }
-
-    .item__count {
-        font-size: 38px;
-        font-weight: 800;
-        line-height: 45px;
-    }
-
-    .item__desc {
-        font-size: 16px;
-        line-height: 14px;
-    }
-
-    .cta__btn {
-        padding: 10px 10px;
-    }
-
-    .experience__item {
-        margin-right: 15px;
-    }
+    /* ______________________________________ SERVICE_________________________________________________________ */
 }
-
-
-
-
-
-/* --------------------------- 480--------------------- */
-/* ==========================HEADER480========================== */
-
-@media (max-width: 480px) {
-
-    .header__title h1 {
-        font-size: 22px;
-        line-height: 20px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-    }
-
-    .header__buttons {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .header__btn {
-        padding: 15px 20px;
-        margin-bottom: 15px;
-    }
-
-    .header__phone {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .header__icon {
-        margin-right: 0px;
-        margin-bottom: 15px;
-    }
-
-    .header__content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* ==========================OFFER480========================== */
-
-    .offer__title h2 {
-        font-size: 24px;
-    }
-
-    .offer__subtitle {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .offer__text {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 30px;
-    }
-
-    .about__link:hover {
-        padding: 5px 5px;
-    }
-
-    .about__link {
-        margin-top: 30px;
-        float: none;
-    }
-
-    .button {
-        padding: 10px 25px;
-    }
-
-    /* ==================cta480================================== */
-    .cta__info {
-        padding: 125px 15px;
-    }
-
-    .cta__title h3 {
-        font-size: 20px;
-        letter-spacing: normal;
-        line-height: 25px;
-    }
-
-    .item__count {
-        font-size: 38px;
-        font-weight: 800;
-        line-height: 45px;
-    }
-
-    .item__desc {
-        font-size: 16px;
-        line-height: 14px;
-    }
-
-    .cta__btn {
-        padding: 10px 10px;
-    }
-
-    .expierence__inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        align-items: center;
-        text-align: center;
-        grid-gap: 5px;
-    }
-
-    .cta__btn {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-}
-
-
-
-
-/* -------------------400----------------------- */
-@media (max-width: 400px) {
-    .header__top-inner {
-        min-width: none;
-    }
-}
-
-/* ______________________________________ SERVICE_________________________________________________________ */
