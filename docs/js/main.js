@@ -26,6 +26,15 @@ $(function () {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 2,
+        responsive: [
+            {
+              breakpoint:900,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll:1
+              }
+            }
+          ]
     })
 
     $('.slider__arrows-prev').on('click', function (e) {
